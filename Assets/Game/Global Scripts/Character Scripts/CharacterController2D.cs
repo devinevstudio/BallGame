@@ -12,11 +12,13 @@ public class CharacterController2D : MonoBehaviour
     //private WorldScript worldScript;
     private Rigidbody2D _rigidBody;
     private bool _isGrounded;
+    private bool _finishedGame = false;
 
     private Vector2 velocityBuffer;
 
     private HashSet<Collision2D> _currentCollisions;
 
+    public bool Finished { get { return _finishedGame;  } set { _finishedGame = value; } }
     public bool Grounded { get { return _isGrounded; } }
 
     void Awake()
@@ -47,16 +49,15 @@ public class CharacterController2D : MonoBehaviour
     public int CollisionCount { get { return _currentCollisions.Count; } }
     public HashSet<Collision2D> Collisions { get { return _currentCollisions; } }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.tag == "Finish")
+        if (collision.CompareTag("Finish"))
         {
-
-        }
-        else { 
-            _currentCollisions.Add(collision);
+            _finishedGame = true;
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision) => _currentCollisions.Add(collision);
     void OnCollisionExit2D(Collision2D collision) => _currentCollisions.Remove(collision); 
 
     void OnCollisionStay2D(Collision2D collision)
@@ -69,5 +70,24 @@ public class CharacterController2D : MonoBehaviour
                 _isGrounded = true;
             }
         }
+    }
+
+    public void ResetPosition()
+    {
+        _rigidBody.linearVelocity = new Vector2(0, 0);
+        _rigidBody.angularVelocity = 0;
+        _rigidBody.transform.position = new Vector2(0, 0);
+        _rigidBody.rotation = 0;
+
+    }
+
+    public void WaitForStart()
+    {
+        float speed = 1.25F;
+        float posX = _rigidBody.transform.position.x;
+        float angle = Time.realtimeSinceStartup * speed % 360;
+        posX = Mathf.Sin(angle) * 5.0F;
+        Vector2 newVec = new Vector2(posX, 0);
+        _rigidBody.transform.position = newVec;
     }
 }

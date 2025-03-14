@@ -16,6 +16,7 @@ public class PlayerIdleState : PlayerBaseState
     {
         if (Ctx.Jumped)
         {
+            Ctx.WorldScript.GameStarted = true;
             SwitchState(Ctx.States.Falling());
         }
         
@@ -37,6 +38,7 @@ public class PlayerIdleState : PlayerBaseState
 
     public override void Update()
     {
+        Ctx.CharacterController.WaitForStart();
         CheckSwitchState();
     }
 }
