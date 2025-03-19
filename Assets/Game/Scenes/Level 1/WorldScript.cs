@@ -7,7 +7,6 @@ public class WorldScript : MonoBehaviour
     private bool _game;
 
     [SerializeField] GameObject WorldBoundsObject;
-    [SerializeField] GameObject _debug;
 
     private Rect _worldBounds;
 
@@ -22,10 +21,6 @@ public class WorldScript : MonoBehaviour
             _worldBounds.xMax = 0 + (WorldBoundsObject.transform.localScale.x / 2);
             _worldBounds.yMin = 0 - (WorldBoundsObject.transform.localScale.y / 2);
             _worldBounds.yMax = 0 + (WorldBoundsObject.transform.localScale.y / 2);
-        }
-        if(_debug != null)
-        {
-            _debug.transform.position = new Vector3(_worldBounds.xMax, 0);
         }
     }
 

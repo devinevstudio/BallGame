@@ -13,13 +13,13 @@ public class CharacterController2D : MonoBehaviour
     private Rigidbody2D _rigidBody;
     private bool _isGrounded;
     private bool _finishedGame = false;
-
-    private Vector2 velocityBuffer;
+    //private float _inputDamping = 1F;
 
     private HashSet<Collision2D> _currentCollisions;
 
     public bool Finished { get { return _finishedGame;  } set { _finishedGame = value; } }
     public bool Grounded { get { return _isGrounded; } }
+    //public float InputDamping { get { return _inputDamping; } }
 
     void Awake()
     {
@@ -57,19 +57,37 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision) => _currentCollisions.Add(collision);
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        _currentCollisions.Add(collision);
+    }
     void OnCollisionExit2D(Collision2D collision) => _currentCollisions.Remove(collision); 
 
     void OnCollisionStay2D(Collision2D collision)
     {
+        ContactPoint2D strongestContact = collision.contacts[0];
+        float maxForce = strongestContact.normalImpulse;
         foreach (var contact in collision.contacts)
         {
-            float angle = Vector2.Angle(Vector2.up, contact.normal);
-            if (Mathf.Abs(angle) < 80.0F)
+
+            if(contact.normalImpulse > maxForce)
             {
-                _isGrounded = true;
+                strongestContact = contact;
+                maxForce = contact.normalImpulse;
             }
         }
+
+
+        float angle = Vector2.Angle(Vector2.up, strongestContact.normal);
+        if (Mathf.Abs(angle) < 80.0F)
+        {
+            _isGrounded = true;
+
+        }
+
+
+        //TODO: Implement Speed Dumping when Uphill moving!
+
     }
 
     public void ResetPosition()

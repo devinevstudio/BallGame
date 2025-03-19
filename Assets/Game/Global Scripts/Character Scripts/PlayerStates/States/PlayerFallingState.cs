@@ -46,8 +46,8 @@ public class PlayerFallingState : PlayerBaseState
         CheckSwitchState();
         if(Ctx.MoveInputVector.x != 0)
         {
-            float multiplier = 1 / (1 + Mathf.Abs(Ctx.PlayerRigidBody2D.linearVelocityX) * 0.1F);//decreases the multiplier the higher the linearvelocityX is to prevent infinitely increasing the velocityX by holding left or right
-            Ctx.PlayerRigidBody2D.linearVelocityX = Ctx.PlayerRigidBody2D.linearVelocityX * (Ctx.MoveInputVector.x * multiplier);
+            float multiplier = 1 / (1 + Mathf.Abs(Ctx.PlayerRigidBody2D.linearVelocity.magnitude));//decreases the multiplier the higher the magnitude is to prevent infinitely increasing the velocityX by holding left or right
+            Ctx.PlayerRigidBody2D.linearVelocityX += (Ctx.MoveInputVector.x * multiplier)*0.05F;
         }
     }
 }

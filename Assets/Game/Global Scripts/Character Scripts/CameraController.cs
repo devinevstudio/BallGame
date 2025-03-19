@@ -6,12 +6,13 @@ public class PlayerCameraController : MonoBehaviour
 {
 
     [SerializeField] GameObject PlayerObject;
+    [SerializeField] GameObject _debug;
     WorldScript _world;
     private Camera _orthoGraphicCamera;
 
     private Rect _bounds;
 
-    private bool _zoomedOut = false;
+    private bool _zoomedOut;
     public bool ZoomedOut { get { return _zoomedOut; } set { _zoomedOut = value; } }
 
 
@@ -36,13 +37,28 @@ public class PlayerCameraController : MonoBehaviour
 
     public void RestrictCamera()
     {
-        Vector3 newPos = new Vector3(PlayerObject.transform.position.x, PlayerObject.transform.position.y, transform.position.z);
+        float newX = PlayerObject.transform.position.x;
+        float newY = PlayerObject.transform.position.y;
+        if (!ZoomedOut)
+        {
+            Vector2 bottomLeft = _orthoGraphicCamera.ViewportToWorldPoint(new Vector3(0, 0));
+            Vector2 topRight = _orthoGraphicCamera.ViewportToWorldPoint(new Vector3(1, 1));
+            float diffX = (topRight.x - bottomLeft.x) / 2;
+            float diffY = (topRight.y - bottomLeft.y) / 2;
 
-
+            newX = Mathf.Clamp(newX, _bounds.xMin + diffX, _bounds.xMax - diffX);
+            newY = Mathf.Clamp(newY, _bounds.yMin + diffY, _bounds.yMax - diffY);
+        }
+        else
+        {
+            newX = 0;
+        }
+        _orthoGraphicCamera.transform.position = new Vector3(newX, newY, -10);
     }
 
     public void UpdateZoom()
     {
-        _orthoGraphicCamera.orthographicSize = 10 + (Convert.ToInt32(ZoomedOut) * 20F);
+        float size = ZoomedOut ? 56.25F : 15F;
+        _orthoGraphicCamera.orthographicSize = size;
     }
 }
