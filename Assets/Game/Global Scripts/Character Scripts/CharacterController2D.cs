@@ -11,11 +11,11 @@ public class CharacterController2D : MonoBehaviour
 
     //private WorldScript worldScript;
     private Rigidbody2D _rigidBody;
+    private CircleCollider2D _circleCollider;
     private bool _isGrounded;
     private bool _finishedGame = false;
-    //private float _inputDamping = 1F;
 
-    private HashSet<Collision2D> _currentCollisions;
+    [SerializeField] float _maxSpeed = 30.0F;
 
     public bool Finished { get { return _finishedGame;  } set { _finishedGame = value; } }
     public bool Grounded { get { return _isGrounded; } }
@@ -24,8 +24,7 @@ public class CharacterController2D : MonoBehaviour
     void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
-        _currentCollisions = new HashSet<Collision2D>();
-        //worldScript = FindFirstObjectByType<WorldScript>();
+        _circleCollider = GetComponent<CircleCollider2D>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,17 +36,9 @@ public class CharacterController2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isGrounded)
-        {
-            if(_currentCollisions.Count <= 0)
-            {
-                _isGrounded = false;
-            }
-        }
+        RestrictSpeed();
+        GroundCheck();
     }
-
-    public int CollisionCount { get { return _currentCollisions.Count; } }
-    public HashSet<Collision2D> Collisions { get { return _currentCollisions; } }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -57,36 +48,43 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        _currentCollisions.Add(collision);
-    }
-    void OnCollisionExit2D(Collision2D collision) => _currentCollisions.Remove(collision); 
-
     void OnCollisionStay2D(Collision2D collision)
     {
-        ContactPoint2D strongestContact = collision.contacts[0];
-        float maxForce = strongestContact.normalImpulse;
-        foreach (var contact in collision.contacts)
-        {
-
-            if(contact.normalImpulse > maxForce)
-            {
-                strongestContact = contact;
-                maxForce = contact.normalImpulse;
-            }
-        }
-
-
-        float angle = Vector2.Angle(Vector2.up, strongestContact.normal);
-        if (Mathf.Abs(angle) < 80.0F)
-        {
-            _isGrounded = true;
-
-        }
 
 
         //TODO: Implement Speed Dumping when Uphill moving!
+
+    }
+
+    public void RestrictSpeed()
+    {
+        Vector2 currentVelocity = _rigidBody.linearVelocity;
+        if(currentVelocity.magnitude > _maxSpeed)
+        {
+            _rigidBody.linearDamping = 0.3F;
+        }
+        _rigidBody.linearDamping = 0F;
+    }
+
+    public void GroundCheck()
+    {
+        _isGrounded = false;
+        ContactPoint2D[] contacts = new ContactPoint2D[10];
+        int count = _circleCollider.GetContacts(contacts);
+        if(count > 0)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                ContactPoint2D contact = contacts[i];
+                float angle = Vector2.Angle(Vector2.up, contact.normal);
+                if (Mathf.Abs(angle) < 80.0F)
+                {
+                    _isGrounded = true;
+                    return;
+                }
+            }
+        }
+
 
     }
 

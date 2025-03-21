@@ -6,7 +6,6 @@ public class PlayerCameraController : MonoBehaviour
 {
 
     [SerializeField] GameObject PlayerObject;
-    [SerializeField] GameObject _debug;
     WorldScript _world;
     private Camera _orthoGraphicCamera;
 
@@ -18,7 +17,7 @@ public class PlayerCameraController : MonoBehaviour
 
     private void Awake()
     {
-        _orthoGraphicCamera = GetComponent<Camera>();
+        _orthoGraphicCamera = Camera.main;
         _world = GameObject.Find("WorldScript").GetComponent<WorldScript>();
     }
 

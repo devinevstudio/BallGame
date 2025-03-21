@@ -16,7 +16,7 @@ public class PlayerIdleState : PlayerBaseState
     {
         if (Ctx.Jumped)
         {
-            Ctx.WorldScript.GameStarted = true;
+            Ctx.CharacterController.GetComponent<CircleCollider2D>().enabled = true;
             SwitchState(Ctx.States.Falling());
         }
         

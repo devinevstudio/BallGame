@@ -1,13 +1,15 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BoosterScript : MonoBehaviour
+public class BoosterBlockScript : MonoBehaviour
 {
+
+    //OBJECT WITH THIS SCRIPT DOESNT CARE ABOUT THE DIRECTION.
 
     private BoxCollider2D _boxCollider;
     private Rigidbody2D _BoostObject;
     private Vector2 _boostVector;
-    private float _boostMultiplier = 1;
+    [SerializeField] float _boostStrength = 1;
 
     private void Awake()
     {
@@ -26,6 +28,7 @@ public class BoosterScript : MonoBehaviour
     {
     }
 
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         //Vector2 boostVector = new Vector2();
@@ -40,7 +43,6 @@ public class BoosterScript : MonoBehaviour
             angle = Vector2.Angle(boostNormal, tangent);
             angle *= Mathf.Deg2Rad;
             _boostVector = new Vector2((Mathf.Cos(angle) * boostNormal.x) - (Mathf.Sin(angle) * boostNormal.y), (Mathf.Sin(angle) * boostNormal.x) + (Mathf.Cos(angle) * boostNormal.y));
-            _boostMultiplier = 2.5F;
         }
         else if (Mathf.Abs(angle) > 90)
         {
@@ -48,7 +50,6 @@ public class BoosterScript : MonoBehaviour
             angle -= 180;
             angle *= Mathf.Deg2Rad;
             _boostVector = new Vector2((Mathf.Cos(angle) * boostNormal.x) - (Mathf.Sin(angle) * boostNormal.y), (Mathf.Sin(angle) * boostNormal.x) + (Mathf.Cos(angle) * boostNormal.y));
-            _boostMultiplier = 2.5F;
         }
     }
 
@@ -56,10 +57,12 @@ public class BoosterScript : MonoBehaviour
     {
         if (_BoostObject == collision.rigidbody)
         {
-            _BoostObject.linearVelocity += (_boostVector * _boostMultiplier);
-            Debug.Log(_boostVector + " " + _boostMultiplier);
-            Debug.Log(_BoostObject.linearVelocity * (_boostVector * _boostMultiplier));
-            Debug.DrawLine(_BoostObject.transform.position, _BoostObject.transform.position + new Vector3(_BoostObject.linearVelocity.x, _BoostObject.linearVelocity.y, 0), Color.red);
+            if(_BoostObject.linearVelocity.magnitude >= 0.125F)
+            {
+                Debug.Log(_BoostObject.linearVelocity.magnitude);
+                _BoostObject.linearVelocity += (_boostVector * _boostStrength);
+                Debug.DrawLine(_BoostObject.transform.position, _BoostObject.transform.position + new Vector3(_BoostObject.linearVelocity.x, _BoostObject.linearVelocity.y, 0), Color.red);
+            }
         }
     }
 }

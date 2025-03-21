@@ -66,8 +66,6 @@ public class PlayerStateMachine : MonoBehaviour
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     public PlayerStateFactory States { get { return _states; } set { _states = value; } }
 
-    public bool Collided { get { return (_characterController.CollisionCount > 0); } }
-
 
     public Rigidbody2D PlayerRigidBody2D { get { return _rigidBody2D; } }
     public Vector2 MoveInputVector { get { return _moveInputVector2; } }
@@ -79,7 +77,6 @@ public class PlayerStateMachine : MonoBehaviour
 
     private void Awake()
     {
-
         _worldScript = GameObject.Find("WorldScript").GetComponent<WorldScript>();
 
         _cameraController = GameObject.Find("Main Camera").GetComponent<PlayerCameraController>();
@@ -105,6 +102,19 @@ public class PlayerStateMachine : MonoBehaviour
 
         _CameraInput.performed += OnCameraZoomPerformed;
         _CameraInput.canceled += OnCameraZoomCanceled;
+    }
+
+    private void OnDestroy()
+    {
+        _moveInput.started -= OnMoveStarted;
+        _moveInput.performed -= OnMovePerformed;
+        _moveInput.canceled -= OnMoveCanceled;
+
+        _jumpInput.performed -= OnJumpPerformed;
+        _jumpInput.canceled -= OnJumpCanceled;
+
+        _CameraInput.performed -= OnCameraZoomPerformed;
+        _CameraInput.canceled -= OnCameraZoomCanceled;
     }
 
     private void OnCameraZoomPerformed(InputAction.CallbackContext context) {
@@ -144,6 +154,7 @@ public class PlayerStateMachine : MonoBehaviour
     void Start()
     {
         _currentState = _states.Idle();
+        _characterController.GetComponent<CircleCollider2D>().enabled = false;
     }
 
     void Update()
@@ -158,9 +169,7 @@ public class PlayerStateMachine : MonoBehaviour
 
         if (_characterController.Finished)
         {
-            _currentState = _states.Idle();
-            _characterController.ResetPosition();
-            _characterController.Finished = false;
+            EnterNextLevel();
         }
     }
 
@@ -174,5 +183,14 @@ public class PlayerStateMachine : MonoBehaviour
     public void ButtonHandled(ButtonType key)
     {
         _waitingEvents.RemoveAll(entry => entry.buttonEvent.Button == key);
+    }
+
+    public void EnterNextLevel()
+    {
+        bool check = LevelManager.Instance.LoadNextScene();
+        if (!check)
+        {
+            Debug.Log("CONGRATZ! YOU WON!!");
+        }
     }
 }
