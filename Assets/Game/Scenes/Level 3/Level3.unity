@@ -348,7 +348,7 @@ Transform:
   m_GameObject: {fileID: 182119582}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8012738, y: -4.6845, z: 0}
+  m_LocalPosition: {x: 1.88, y: -2.94, z: 0}
   m_LocalScale: {x: 30, y: 4.1289, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -482,7 +482,7 @@ Transform:
   m_GameObject: {fileID: 505566451}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.91, y: 31.7603, z: 0}
+  m_LocalPosition: {x: 17.54, y: 32.03, z: 0}
   m_LocalScale: {x: 8.3569, y: 71.18559, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -641,7 +641,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5662058757065909148, guid: 1aaf6068d4a8acf40ba399cb9c4e8caf, type: 3}
+  m_Sprite: {fileID: -3603556060819865620, guid: 1aaf6068d4a8acf40ba399cb9c4e8caf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -879,7 +879,7 @@ Transform:
   m_GameObject: {fileID: 771056804}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 69, z: 0}
+  m_LocalPosition: {x: 1, y: 10.4, z: 0}
   m_LocalScale: {x: -46.88348, y: 5.07203, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -896,6 +896,7 @@ GameObject:
   - component: {fileID: 794445434}
   - component: {fileID: 794445433}
   - component: {fileID: 794445432}
+  - component: {fileID: 794445435}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Bumper
@@ -938,7 +939,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.49999997
+  m_Radius: 0.5
 --- !u!212 &794445433
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -983,11 +984,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 6010198676210802814, guid: 695bb504a2cd0ab4fb4748e5cc23bd18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -1003,12 +1004,24 @@ Transform:
   m_GameObject: {fileID: 794445431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: -6, z: 0}
+  m_LocalPosition: {x: 6, y: -1.2, z: 0}
   m_LocalScale: {x: 3.428, y: 3.428, z: 3.428}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &794445435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794445431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b050e2e093df74187ad40dfb3aaabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &840206955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,7 +1150,7 @@ Transform:
   m_GameObject: {fileID: 840206955}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.73, y: 32.765, z: 0}
+  m_LocalPosition: {x: -13.64, y: 32.96, z: 0}
   m_LocalScale: {x: 8.3569, y: 71.18559, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1154,6 +1167,7 @@ GameObject:
   - component: {fileID: 1055083705}
   - component: {fileID: 1055083704}
   - component: {fileID: 1055083703}
+  - component: {fileID: 1055083706}
   m_Layer: 0
   m_Name: Bumper (4)
   m_TagString: Bumper
@@ -1196,7 +1210,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.49999997
+  m_Radius: 0.5
 --- !u!212 &1055083704
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1241,11 +1255,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 6010198676210802814, guid: 695bb504a2cd0ab4fb4748e5cc23bd18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -1267,6 +1281,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055083706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055083702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b050e2e093df74187ad40dfb3aaabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1126974989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1304,8 @@ GameObject:
   - component: {fileID: 1126974992}
   - component: {fileID: 1126974991}
   - component: {fileID: 1126974990}
+  - component: {fileID: 1126974993}
+  - component: {fileID: 1126974994}
   m_Layer: 0
   m_Name: Bumper (2)
   m_TagString: Bumper
@@ -1320,7 +1348,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.49999997
+  m_Radius: 0.5
 --- !u!212 &1126974991
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1365,11 +1393,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 6010198676210802814, guid: 695bb504a2cd0ab4fb4748e5cc23bd18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -1385,12 +1413,36 @@ Transform:
   m_GameObject: {fileID: 1126974989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: -2.7, z: 0}
+  m_LocalPosition: {x: -6.3, y: 6.2, z: 0}
   m_LocalScale: {x: 3.428, y: 3.428, z: 3.428}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1126974993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126974989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b050e2e093df74187ad40dfb3aaabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1126974994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126974989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b050e2e093df74187ad40dfb3aaabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1134601825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1588,7 @@ GameObject:
   - component: {fileID: 1354183046}
   - component: {fileID: 1354183045}
   - component: {fileID: 1354183044}
-  - component: {fileID: 1354183043}
+  - component: {fileID: 1354183047}
   m_Layer: 0
   m_Name: Booster (1)
   m_TagString: Untagged
@@ -1544,19 +1596,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1354183043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354183042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 555e419140b3c0c49ba40874fecefe4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _boostStrength: 1
 --- !u!61 &1354183044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1666,13 +1705,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354183042}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.1882, y: 30.0014, z: 0}
-  m_LocalScale: {x: 62.333042, y: 4.1210985, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2519, y: 31.4092, z: 0}
+  m_LocalScale: {x: 9.529349, y: 59.56809, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1354183047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354183042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983b5655d3a22a8438a68813b55806df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _boostStrength: 1
 --- !u!1 &1528963153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +1781,7 @@ GameObject:
   - component: {fileID: 1585109636}
   - component: {fileID: 1585109635}
   - component: {fileID: 1585109634}
+  - component: {fileID: 1585109637}
   m_Layer: 0
   m_Name: Bumper (5)
   m_TagString: Bumper
@@ -1771,7 +1824,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.49999997
+  m_Radius: 0.5
 --- !u!212 &1585109635
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1816,11 +1869,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 6010198676210802814, guid: 695bb504a2cd0ab4fb4748e5cc23bd18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -1842,6 +1895,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1585109637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585109633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b050e2e093df74187ad40dfb3aaabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1616908962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,6 +2337,7 @@ GameObject:
   - component: {fileID: 1747618747}
   - component: {fileID: 1747618746}
   - component: {fileID: 1747618745}
+  - component: {fileID: 1747618748}
   m_Layer: 0
   m_Name: Bumper (1)
   m_TagString: Bumper
@@ -2314,7 +2380,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.49999997
+  m_Radius: 0.5
 --- !u!212 &1747618746
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2359,11 +2425,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 6010198676210802814, guid: 695bb504a2cd0ab4fb4748e5cc23bd18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -2379,12 +2445,24 @@ Transform:
   m_GameObject: {fileID: 1747618744}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: -9.1, z: 0}
+  m_LocalPosition: {x: -4.9, y: -1.1, z: 0}
   m_LocalScale: {x: 3.428, y: 3.428, z: 3.428}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747618748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747618744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b050e2e093df74187ad40dfb3aaabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1777952148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2396,6 +2474,7 @@ GameObject:
   - component: {fileID: 1777952151}
   - component: {fileID: 1777952150}
   - component: {fileID: 1777952149}
+  - component: {fileID: 1777952152}
   m_Layer: 0
   m_Name: Bumper (3)
   m_TagString: Bumper
@@ -2438,7 +2517,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.49999997
+  m_Radius: 0.5
 --- !u!212 &1777952150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2483,11 +2562,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 6010198676210802814, guid: 695bb504a2cd0ab4fb4748e5cc23bd18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -2503,12 +2582,24 @@ Transform:
   m_GameObject: {fileID: 1777952148}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -16.3, z: 0}
+  m_LocalPosition: {x: 1.1, y: 6.8, z: 0}
   m_LocalScale: {x: 3.428, y: 3.428, z: 3.428}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1777952152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777952148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b050e2e093df74187ad40dfb3aaabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

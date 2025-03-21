@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1aaf6068d4a8acf40ba399cb9c4e8caf
+guid: f38e66e975acd684da049e4cc8870bd0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3603556060819865620
-    second: ball_0
+      213: -4195390698570692603
+    second: Booster-Sheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ball_0
+      name: Booster-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
+        width: 512
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -113,10 +113,76 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cef30aaead89dfdc0800000000000000
-      internalID: -3603556060819865620
+      spriteID: abe4f0afa851b8e47af94204090d4866
+      internalID: 351889699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Booster-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e02c0cfea004746bfdaa3b395b89b7
+      internalID: 907597685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Booster-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e91859d20946ea43ab812f42e2bfd7e
+      internalID: 1089669868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Booster-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d424214f64336fa4b978e7b748a785fb
+      internalID: 2016264604
       vertices: []
       indices: 
       edges: []
@@ -125,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0bdbf299ec3f9b5418c2905bb885115c
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +200,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Booster-Sheet_0: 351889699
+      Booster-Sheet_1: 907597685
+      Booster-Sheet_2: 1089669868
+      Booster-Sheet_3: 2016264604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

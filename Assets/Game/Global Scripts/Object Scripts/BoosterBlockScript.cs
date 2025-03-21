@@ -42,7 +42,7 @@ public class BoosterBlockScript : MonoBehaviour
         {
             angle = Vector2.Angle(boostNormal, tangent);
             angle *= Mathf.Deg2Rad;
-            _boostVector = new Vector2((Mathf.Cos(angle) * boostNormal.x) - (Mathf.Sin(angle) * boostNormal.y), (Mathf.Sin(angle) * boostNormal.x) + (Mathf.Cos(angle) * boostNormal.y));
+            _boostVector = new Vector2((Mathf.Cos(angle) * boostNormal.x) - (Mathf.Sin(angle) * boostNormal.y), (Mathf.Sin(angle) * boostNormal.x) + (Mathf.Cos(angle) * boostNormal.y)); //Rotating Vector using RotationMatrix
         }
         else if (Mathf.Abs(angle) > 90)
         {
@@ -59,9 +59,7 @@ public class BoosterBlockScript : MonoBehaviour
         {
             if(_BoostObject.linearVelocity.magnitude >= 0.125F)
             {
-                Debug.Log(_BoostObject.linearVelocity.magnitude);
                 _BoostObject.linearVelocity += (_boostVector * _boostStrength);
-                Debug.DrawLine(_BoostObject.transform.position, _BoostObject.transform.position + new Vector3(_BoostObject.linearVelocity.x, _BoostObject.linearVelocity.y, 0), Color.red);
             }
         }
     }

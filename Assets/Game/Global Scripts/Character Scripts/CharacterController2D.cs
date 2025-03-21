@@ -61,9 +61,9 @@ public class CharacterController2D : MonoBehaviour
         Vector2 currentVelocity = _rigidBody.linearVelocity;
         if(currentVelocity.magnitude > _maxSpeed)
         {
-            _rigidBody.linearDamping = 0.3F;
+            _rigidBody.linearVelocityX = _maxSpeed;
+            _rigidBody.linearVelocityY = _maxSpeed;
         }
-        _rigidBody.linearDamping = 0F;
     }
 
     public void GroundCheck()

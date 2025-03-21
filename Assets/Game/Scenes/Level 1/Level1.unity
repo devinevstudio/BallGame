@@ -1853,6 +1853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99895c326d12df44b97933768848171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxSpeed: 30
 --- !u!58 &1531933933
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1933,7 +1934,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5662058757065909148, guid: 1aaf6068d4a8acf40ba399cb9c4e8caf, type: 3}
+  m_Sprite: {fileID: -3603556060819865620, guid: 1aaf6068d4a8acf40ba399cb9c4e8caf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
