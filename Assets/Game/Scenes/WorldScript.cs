@@ -14,10 +14,10 @@ public class WorldScript : MonoBehaviour
     {
         if(WorldBoundsObject != null)
         {
-            _worldBounds.xMin = 0 - (WorldBoundsObject.transform.localScale.x / 2);
-            _worldBounds.xMax = 0 + (WorldBoundsObject.transform.localScale.x / 2);
-            _worldBounds.yMin = 0 - (WorldBoundsObject.transform.localScale.y / 2);
-            _worldBounds.yMax = 0 + (WorldBoundsObject.transform.localScale.y / 2);
+            _worldBounds.xMin = WorldBoundsObject.transform.position.x - (WorldBoundsObject.transform.localScale.x / 2);
+            _worldBounds.xMax = WorldBoundsObject.transform.position.x + (WorldBoundsObject.transform.localScale.x / 2);
+            _worldBounds.yMin = WorldBoundsObject.transform.position.y - (WorldBoundsObject.transform.localScale.y / 2);
+            _worldBounds.yMax = WorldBoundsObject.transform.position.y + (WorldBoundsObject.transform.localScale.y / 2);
         }
     }
 

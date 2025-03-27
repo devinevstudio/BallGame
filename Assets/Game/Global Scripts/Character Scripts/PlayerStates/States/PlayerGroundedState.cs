@@ -41,11 +41,9 @@ public class PlayerGroundedState : PlayerBaseState
     public override void Update()
     {
         CheckSwitchState();
-
-
         if (Ctx.IsPressed(PlayerStateMachine.ButtonType.JUMP))
         {
-            Ctx.PlayerRigidBody2D.linearVelocityY += 10.0F;
+            Ctx.PlayerRigidBody2D.linearVelocityY += 5.0F;
             Ctx.ButtonHandled(PlayerStateMachine.ButtonType.JUMP);
         }
     }

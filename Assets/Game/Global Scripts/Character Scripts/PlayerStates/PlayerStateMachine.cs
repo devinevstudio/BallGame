@@ -91,7 +91,7 @@ public class PlayerStateMachine : MonoBehaviour
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _moveInput = InputSystem.actions.FindAction("Move");
         _jumpInput = InputSystem.actions.FindAction("Jump");
-        _CameraInput = InputSystem.actions.FindAction("Camera");
+        _CameraInput = InputSystem.actions.FindAction("CameraZoom");
 
         _moveInput.started += OnMoveStarted;
         _moveInput.performed += OnMovePerformed;

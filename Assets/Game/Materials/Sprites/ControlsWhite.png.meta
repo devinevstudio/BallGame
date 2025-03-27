@@ -1,0 +1,845 @@
+fileFormatVersion: 2
+guid: d66bfb7b59ba95947a4290e7c98a95a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6134807079902072956
+    second: ControlsWhite_0
+  - first:
+      213: -1196942971794068814
+    second: ControlsWhite_1
+  - first:
+      213: 5329069418734057976
+    second: ControlsWhite_2
+  - first:
+      213: 5077896028507474195
+    second: ControlsWhite_3
+  - first:
+      213: -5801479389117296037
+    second: ControlsWhite_4
+  - first:
+      213: -9155865564355594793
+    second: ControlsWhite_5
+  - first:
+      213: -9204483129570652751
+    second: ControlsWhite_6
+  - first:
+      213: -1745526762021520302
+    second: ControlsWhite_7
+  - first:
+      213: 7876210586874840338
+    second: ControlsWhite_8
+  - first:
+      213: -5667631093335505579
+    second: ControlsWhite_9
+  - first:
+      213: -8563241199860981616
+    second: ControlsWhite_10
+  - first:
+      213: 6153052059179346947
+    second: ControlsWhite_11
+  - first:
+      213: 6949264321616504799
+    second: ControlsWhite_12
+  - first:
+      213: -2216764283824519355
+    second: ControlsWhite_13
+  - first:
+      213: 3119482441180147782
+    second: ControlsWhite_14
+  - first:
+      213: -1340860852991334735
+    second: ControlsWhite_15
+  - first:
+      213: -5407703124078748811
+    second: ControlsWhite_16
+  - first:
+      213: -972658358919027354
+    second: ControlsWhite_17
+  - first:
+      213: 5435089425214556088
+    second: ControlsWhite_18
+  - first:
+      213: 309862352192462051
+    second: ControlsWhite_19
+  - first:
+      213: -621729690552821660
+    second: ControlsWhite_20
+  - first:
+      213: 8860481488171820910
+    second: ControlsWhite_21
+  - first:
+      213: -3339303835485500958
+    second: ControlsWhite_22
+  - first:
+      213: 2819259902163943463
+    second: ControlsWhite_23
+  - first:
+      213: -3546144337156142745
+    second: ControlsWhite_24
+  - first:
+      213: -5627426505799789438
+    second: ControlsWhite_25
+  - first:
+      213: 2302626524653131556
+    second: ControlsWhite_26
+  - first:
+      213: 3346738580234606923
+    second: ControlsWhite_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ControlsWhite_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 37
+        width: 158
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48fa2e4e679ccdaa0800000000000000
+      internalID: -6134807079902072956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_1
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 157
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba60d575ba936fe0800000000000000
+      internalID: -1196942971794068814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 157
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f97a07d668a4f940800000000000000
+      internalID: 5329069418734057976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 157
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3190e89b88f487640800000000000000
+      internalID: 5077896028507474195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_4
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 157
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52d9efab310d7fa0800000000000000
+      internalID: -5801479389117296037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_5
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 155
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d57a5177c4dfe080800000000000000
+      internalID: -9155865564355594793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_6
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 155
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bd8dd07c5b134080800000000000000
+      internalID: -9204483129570652751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_7
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 155
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25cf4cb78a4a6c7e0800000000000000
+      internalID: -1745526762021520302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_8
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 155
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21588de7ccbed4d60800000000000000
+      internalID: 7876210586874840338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_9
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 127
+        width: 126
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55547cb8c878851b0800000000000000
+      internalID: -5667631093335505579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_10
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 97
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 090eb4caf71492980800000000000000
+      internalID: -8563241199860981616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_11
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 97
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ceedf5f38046550800000000000000
+      internalID: 6153052059179346947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_12
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 97
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd76f3ce41fb07060800000000000000
+      internalID: 6949264321616504799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_13
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 97
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 547cdd7f0a87c31e0800000000000000
+      internalID: -2216764283824519355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_14
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 65
+        width: 72
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6407c95a0c0aa4b20800000000000000
+      internalID: 3119482441180147782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_15
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 73
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b6693c882e446de0800000000000000
+      internalID: -1340860852991334735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_16
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 73
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b148ee8aaf3f4b0800000000000000
+      internalID: -5407703124078748811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_17
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 73
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66521dc306c6082f0800000000000000
+      internalID: -972658358919027354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_18
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 73
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7456039015d6b40800000000000000
+      internalID: 5435089425214556088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_19
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 47
+        width: 126
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ecd2b7ea2adc4400800000000000000
+      internalID: 309862352192462051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_20
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 25
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4681948f32c2f57f0800000000000000
+      internalID: -621729690552821660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_21
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 21
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67e769f7f0c6fa70800000000000000
+      internalID: 8860481488171820910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_22
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 21
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e989c0aad868a1d0800000000000000
+      internalID: -3339303835485500958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_23
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 21
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7200cf5a1f5002720800000000000000
+      internalID: 2819259902163943463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_24
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 15
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7698b8d738099cec0800000000000000
+      internalID: -3546144337156142745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_25
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 25
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2849f2a886d57e1b0800000000000000
+      internalID: -5627426505799789438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_26
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 25
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4279754df9294ff10800000000000000
+      internalID: 2302626524653131556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ControlsWhite_27
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 19
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b499af6c101027e20800000000000000
+      internalID: 3346738580234606923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ControlsWhite_0: -6134807079902072956
+      ControlsWhite_1: -1196942971794068814
+      ControlsWhite_10: -8563241199860981616
+      ControlsWhite_11: 6153052059179346947
+      ControlsWhite_12: 6949264321616504799
+      ControlsWhite_13: -2216764283824519355
+      ControlsWhite_14: 3119482441180147782
+      ControlsWhite_15: -1340860852991334735
+      ControlsWhite_16: -5407703124078748811
+      ControlsWhite_17: -972658358919027354
+      ControlsWhite_18: 5435089425214556088
+      ControlsWhite_19: 309862352192462051
+      ControlsWhite_2: 5329069418734057976
+      ControlsWhite_20: -621729690552821660
+      ControlsWhite_21: 8860481488171820910
+      ControlsWhite_22: -3339303835485500958
+      ControlsWhite_23: 2819259902163943463
+      ControlsWhite_24: -3546144337156142745
+      ControlsWhite_25: -5627426505799789438
+      ControlsWhite_26: 2302626524653131556
+      ControlsWhite_27: 3346738580234606923
+      ControlsWhite_3: 5077896028507474195
+      ControlsWhite_4: -5801479389117296037
+      ControlsWhite_5: -9155865564355594793
+      ControlsWhite_6: -9204483129570652751
+      ControlsWhite_7: -1745526762021520302
+      ControlsWhite_8: 7876210586874840338
+      ControlsWhite_9: -5667631093335505579
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

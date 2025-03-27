@@ -30,18 +30,12 @@ public class PlayerRollingState : PlayerBaseState
         CheckSwitchState();
         Rigidbody2D rb = Ctx.PlayerRigidBody2D;
 
-        
 
-        //TODO: Work on it, when time
-        //Vector2 moveInput = Ctx.MoveInputVector;
-        //if (Mathf.Sign(moveInput.x) != Mathf.Sign(rb.linearVelocityX))
-        //{
-        //    rb.linearVelocityX += moveInput.x * 0.25F; //Deaccellerating Ball
 
-        //}
-        //else
-        //{
-        //    rb.linearVelocityX = Mathf.Clamp(rb.linearVelocityX + moveInput.x, -20.0F, 20.0F) * Ctx.CharacterController.InputDamping; //Accelerating Ball
-        //}
+        if (Mathf.Abs(Ctx.MoveInputVector.x) > 0)
+        {
+            float multiplier = 1 / (1 + Mathf.Abs(Ctx.PlayerRigidBody2D.linearVelocity.magnitude));//decreases the multiplier the higher the magnitude is to prevent infinitely increasing the velocityX by holding left or right
+            Ctx.PlayerRigidBody2D.linearVelocityX += (Ctx.MoveInputVector.x * multiplier) * 0.05F;
+        }
     }
 }

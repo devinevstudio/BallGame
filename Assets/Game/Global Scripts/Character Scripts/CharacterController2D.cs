@@ -15,7 +15,7 @@ public class CharacterController2D : MonoBehaviour
     private bool _isGrounded;
     private bool _finishedGame = false;
 
-    [SerializeField] float _maxSpeed = 30.0F;
+    [SerializeField] float _maxSpeed = 20.0F;
 
     public bool Finished { get { return _finishedGame;  } set { _finishedGame = value; } }
     public bool Grounded { get { return _isGrounded; } }
@@ -58,10 +58,12 @@ public class CharacterController2D : MonoBehaviour
 
     public void RestrictSpeed()
     {
-        Vector2 currentVelocity = _rigidBody.linearVelocity;
-        if(currentVelocity.magnitude > _maxSpeed)
+        if(_rigidBody.linearVelocityX > _maxSpeed)
         {
             _rigidBody.linearVelocityX = _maxSpeed;
+        }
+        if(_rigidBody.linearVelocityY > _maxSpeed)
+        {
             _rigidBody.linearVelocityY = _maxSpeed;
         }
     }

@@ -24,9 +24,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Camera",
+                    "name": "CameraZoom",
                     "type": "Button",
-                    "id": "67ba26e7-d033-4eda-8495-00d45eb2b68a",
+                    "id": "2dedc441-a4a3-4fa5-b4c6-cf3257a6efdc",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -124,23 +124,23 @@
                 },
                 {
                     "name": "",
-                    "id": "9409a8e1-225c-458f-ae62-459043b347df",
+                    "id": "e6b839c5-978e-4d5d-b178-f83959bac0e6",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera",
+                    "action": "CameraZoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "70d99b72-3a71-47ab-bd87-9675021d39ce",
+                    "id": "3e5a769c-9b1a-4e19-b8ac-d581e0c1ad49",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Camera",
+                    "action": "CameraZoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

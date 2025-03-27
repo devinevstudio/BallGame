@@ -4,6 +4,7 @@ using UnityEngine;
 public class BumperScript : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
+    private Vector2 _spriteSize;
     private bool _animating;
     float vel = 5;
 
@@ -11,7 +12,8 @@ public class BumperScript : MonoBehaviour
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _spriteRenderer.drawMode = SpriteDrawMode.Sliced;
-        _spriteRenderer.size = new Vector2(1, 1);
+
+        _spriteSize = _spriteRenderer.size;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,8 +37,8 @@ public class BumperScript : MonoBehaviour
     {
         if(collision.collider.GetComponent<Rigidbody2D>() != null)
         {
-            Vector2 scaled = new Vector2(1.1F, 1.1F);
-            _spriteRenderer.size = scaled;
+            Vector2 scaled = new Vector2(1.025F, 1.025F);
+            _spriteRenderer.size *= scaled;
             _animating = true;
             vel = 5;
         }
@@ -45,8 +47,8 @@ public class BumperScript : MonoBehaviour
     void ResetSpriteScale()
     {
         Vector2 size = _spriteRenderer.size;
-        size.x = Mathf.SmoothDamp(size.x, 1, ref vel, 0.8F);
-        size.y = Mathf.SmoothDamp(size.y, 1, ref vel, 0.8F);
+        size.x = Mathf.SmoothDamp(size.x, _spriteSize.x, ref vel, 0.2F);
+        size.y = Mathf.SmoothDamp(size.y, _spriteSize.y, ref vel, 0.2F);
         _spriteRenderer.size = size;
     }
 

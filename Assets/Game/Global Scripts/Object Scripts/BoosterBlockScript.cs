@@ -36,8 +36,7 @@ public class BoosterBlockScript : MonoBehaviour
         _BoostObject = collision.rigidbody;
         Vector2 boostNormal = conPoint.normal;
         Vector2 tangent = new Vector2(-boostNormal.y, boostNormal.x);
-        Vector2 check = _BoostObject.linearVelocity * boostNormal;
-        float angle = Vector2.Angle(check, tangent);
+        float angle = Vector2.Angle(_BoostObject.linearVelocity, tangent);
         if (Mathf.Abs(angle) < 90)
         {
             angle = Vector2.Angle(boostNormal, tangent);
@@ -51,6 +50,7 @@ public class BoosterBlockScript : MonoBehaviour
             angle *= Mathf.Deg2Rad;
             _boostVector = new Vector2((Mathf.Cos(angle) * boostNormal.x) - (Mathf.Sin(angle) * boostNormal.y), (Mathf.Sin(angle) * boostNormal.x) + (Mathf.Cos(angle) * boostNormal.y));
         }
+        Debug.DrawLine(_BoostObject.position, _BoostObject.position + _boostVector);
     }
 
     public void OnCollisionStay2D(Collision2D collision)
