@@ -8,6 +8,7 @@ public class PlayerStateMachine : MonoBehaviour
 {
 
     private WorldScript _worldScript;
+    private GameObject YOUWON;
 
     private Rigidbody2D _rigidBody2D;
 
@@ -17,6 +18,8 @@ public class PlayerStateMachine : MonoBehaviour
     private InputAction _moveInput;
     private InputAction _jumpInput;
     private InputAction _CameraInput;
+    private InputAction _ResetInput;
+    private InputAction _ESC;
 
 
     private Vector2 _moveInputVector2;
@@ -78,6 +81,11 @@ public class PlayerStateMachine : MonoBehaviour
     private void Awake()
     {
         _worldScript = GameObject.Find("WorldScript").GetComponent<WorldScript>();
+        YOUWON = GameObject.Find("YOUWON");
+        if(YOUWON != null)
+        {
+            YOUWON.GetComponent<SpriteRenderer>().enabled = false;
+        }
 
         _cameraController = GameObject.Find("Main Camera").GetComponent<PlayerCameraController>();
         _characterController = GetComponent<CharacterController2D>();
@@ -91,7 +99,9 @@ public class PlayerStateMachine : MonoBehaviour
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _moveInput = InputSystem.actions.FindAction("Move");
         _jumpInput = InputSystem.actions.FindAction("Jump");
+        _ResetInput = InputSystem.actions.FindAction("Reset");
         _CameraInput = InputSystem.actions.FindAction("CameraZoom");
+        _ESC = InputSystem.actions.FindAction("ESC");
 
         _moveInput.started += OnMoveStarted;
         _moveInput.performed += OnMovePerformed;
@@ -102,6 +112,12 @@ public class PlayerStateMachine : MonoBehaviour
 
         _CameraInput.performed += OnCameraZoomPerformed;
         _CameraInput.canceled += OnCameraZoomCanceled;
+
+        _ResetInput.performed += OnResetPerformed;
+        _ResetInput.canceled += OnResetCanceled;
+
+        _ESC.performed += OnESCPerformed;
+        _ESC.canceled += OnESCCanceled;
     }
 
     private void OnDestroy()
@@ -115,6 +131,12 @@ public class PlayerStateMachine : MonoBehaviour
 
         _CameraInput.performed -= OnCameraZoomPerformed;
         _CameraInput.canceled -= OnCameraZoomCanceled;
+
+        _ResetInput.performed -= OnResetPerformed;
+        _ResetInput.canceled -= OnResetCanceled;
+
+        _ESC.performed -= OnESCPerformed;
+        _ESC.canceled -= OnESCCanceled;
     }
 
     private void OnCameraZoomPerformed(InputAction.CallbackContext context) {
@@ -127,6 +149,25 @@ public class PlayerStateMachine : MonoBehaviour
         _cameraZoomedOut = (context.ReadValue<float>()) > 0;
         CameraController.ZoomedOut = _cameraZoomedOut;
         CameraController.UpdateZoom();
+    }
+
+    private void OnResetPerformed(InputAction.CallbackContext context) {
+        _characterController.ResetPosition();
+        _characterController.WaitForStart();
+        _currentState = _states.Idle();
+    }
+
+    private void OnResetCanceled(InputAction.CallbackContext context) {
+
+    }
+
+    private void OnESCPerformed(InputAction.CallbackContext context)
+    {
+        Application.Quit();
+    }
+
+    private void OnESCCanceled(InputAction.CallbackContext context) {
+
     }
 
     private void OnJumpPerformed(InputAction.CallbackContext context){
@@ -190,7 +231,13 @@ public class PlayerStateMachine : MonoBehaviour
         bool check = LevelManager.Instance.LoadNextScene();
         if (!check)
         {
-            Debug.Log("CONGRATZ! YOU WON!!");
+            YOUWON.GetComponent<SpriteRenderer>().enabled = true;
+            _characterController.gameObject.transform.position = YOUWON.transform.position;
+            _rigidBody2D.freezeRotation = true;
+            _rigidBody2D.linearVelocityX = 0;
+            _rigidBody2D.linearVelocityY = 0;
+            _moveInput.Disable();
+            _ResetInput.Disable();
         }
     }
 }

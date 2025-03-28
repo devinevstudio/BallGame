@@ -8,6 +8,10 @@ public class BoosterTriggerScript : MonoBehaviour
     //TRIGGER WITH THIS SCRIPT A ONE DIRECTIONAL! EVERY OBJECT ENTERING THIS TRIGGER WILL BE BOOSTED IN THE LOCAL POSITIVE Y DIRECTION OF THIS OBJECT
 
     private BoxCollider2D _boxCollider;
+
+
+    private AudioSource _audioSource;
+    
     private Vector2 _direction;
     private float _rotation;
     [SerializeField] float _boostStrength = 1;
@@ -15,6 +19,8 @@ public class BoosterTriggerScript : MonoBehaviour
     private void Awake()
     {
         _boxCollider = GetComponent<BoxCollider2D>();
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.volume = 0.5F;
         _rotation = transform.eulerAngles.z;
         _direction = Vector2.up;
         ReCalculateDirection();
@@ -46,7 +52,7 @@ public class BoosterTriggerScript : MonoBehaviour
     {
         //Accelerate Collider in Direction specified
         Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-        if(rb != null)
+        if(rb.CompareTag("Player"))
         {
             if (rb.linearVelocity.magnitude >= 0.125F)
             {

@@ -35,7 +35,7 @@ public class PlayerRollingState : PlayerBaseState
         if (Mathf.Abs(Ctx.MoveInputVector.x) > 0)
         {
             float multiplier = 1 / (1 + Mathf.Abs(Ctx.PlayerRigidBody2D.linearVelocity.magnitude));//decreases the multiplier the higher the magnitude is to prevent infinitely increasing the velocityX by holding left or right
-            Ctx.PlayerRigidBody2D.linearVelocityX += (Ctx.MoveInputVector.x * multiplier) * 0.05F;
+            Ctx.PlayerRigidBody2D.linearVelocityX += (Ctx.MoveInputVector.x * multiplier)*0.5F;
         }
     }
 }
