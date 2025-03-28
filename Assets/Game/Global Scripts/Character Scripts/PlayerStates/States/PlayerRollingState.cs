@@ -30,7 +30,8 @@ public class PlayerRollingState : PlayerBaseState
         CheckSwitchState();
         Rigidbody2D rb = Ctx.PlayerRigidBody2D;
 
-
+        bool flipState = Ctx.PlayerRigidBody2D.angularVelocity < 0;
+        Ctx.CharacterController.FlipSprite(flipState);
 
         if (Mathf.Abs(Ctx.MoveInputVector.x) > 0)
         {

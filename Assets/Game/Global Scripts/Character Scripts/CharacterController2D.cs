@@ -12,12 +12,13 @@ public class CharacterController2D : MonoBehaviour
     //private WorldScript worldScript;
     private Rigidbody2D _rigidBody;
     private CircleCollider2D _circleCollider;
+    private SpriteRenderer _spriteRender;
     private bool _isGrounded;
     private bool _finishedGame = false;
 
     [SerializeField] float _maxSpeed = 20.0F;
 
-    public bool Finished { get { return _finishedGame;  } set { _finishedGame = value; } }
+    public bool Finished { get { return _finishedGame; } set { _finishedGame = value; } }
     public bool Grounded { get { return _isGrounded; } }
     //public float InputDamping { get { return _inputDamping; } }
 
@@ -25,6 +26,7 @@ public class CharacterController2D : MonoBehaviour
     {
         _rigidBody = GetComponent<Rigidbody2D>();
         _circleCollider = GetComponent<CircleCollider2D>();
+        _spriteRender = GetComponent<SpriteRenderer>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -58,11 +60,11 @@ public class CharacterController2D : MonoBehaviour
 
     public void RestrictSpeed()
     {
-        if(_rigidBody.linearVelocityX > _maxSpeed)
+        if (_rigidBody.linearVelocityX > _maxSpeed)
         {
             _rigidBody.linearVelocityX = _maxSpeed;
         }
-        if(_rigidBody.linearVelocityY > _maxSpeed)
+        if (_rigidBody.linearVelocityY > _maxSpeed)
         {
             _rigidBody.linearVelocityY = _maxSpeed;
         }
@@ -73,7 +75,7 @@ public class CharacterController2D : MonoBehaviour
         _isGrounded = false;
         ContactPoint2D[] contacts = new ContactPoint2D[10];
         int count = _circleCollider.GetContacts(contacts);
-        if(count > 0)
+        if (count > 0)
         {
             for (int i = 0; i < count; i++)
             {
@@ -108,4 +110,12 @@ public class CharacterController2D : MonoBehaviour
         Vector2 newVec = new Vector2(posX, 0);
         _rigidBody.transform.position = newVec;
     }
+
+
+    public void FlipSprite(bool state){
+
+        _spriteRender.flipX = state;
+
+    }
+
 }
